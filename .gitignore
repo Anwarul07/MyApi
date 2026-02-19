@@ -1,6 +1,6 @@
 # SQLite databases
-*.sqlite3
-books.sqlite3
+# *.sqlite3
+# books.sqlite3
 
 # Environment variables
 .env
@@ -16,8 +16,8 @@ benv/
 
 # Static & media (Render)
 staticfiles/
+
 media/
-books.sqlite3
 env/pyvenv.cfg
 env/Lib/site-packages/autopep8.py
 env/Lib/site-packages/decouple.py
