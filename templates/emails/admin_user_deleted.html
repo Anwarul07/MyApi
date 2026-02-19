@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Termination Alert</title>
+</head>
+
+<body
+    style="margin:0; padding:0; background-color:#f1f5f9; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#1e293b;">
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0"
+        style="background-color:#f1f5f9; padding: 50px 15px;">
+        <tr>
+            <td align="center">
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                    style="max-width:600px; background-color:#ffffff; border-radius:4px; overflow:hidden; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);">
+
+                    <tr>
+                        <td style="background-color: #dc2626; padding: 12px 40px; height: 50px;">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td
+                                        style="color: #ffffff; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px;text-align: center;">
+                                        Security Operations Center (SOC)
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding: 40px 40px 0px 40px;">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <h1
+                                            style="margin: 0; font-size: 24px; font-weight: 700; color: #111827; line-height: 1.2;">
+                                            Account Deletion Notification
+                                        </h1>
+                                        <div
+                                            style="height: 4px; width: 100px; background-color: #dc2626; margin-top: 15px;">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding: 30px 40px;">
+                            <p style="font-size: 16px; font-weight: 600; color: #1e293b; margin: 0 0 15px 0;">
+                                Dear Admin,
+                            </p>
+
+                            <p style="font-size: 15px; line-height: 1.6; color: #374151; margin: 0 0 25px 0;">
+                                This official communication is to certify that a {{ user.username | capfirst }} user
+                                profile and
+                                all
+                                associated
+                                personal identifiers with {{ user.email }} have been permanently deleted
+                                from the <strong> {{ SITE_NAME }} </strong> production environment.
+                            </p>
+
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                                style="border: 1px solid #fee2e2; background-color: #fef2f2; border-radius: 4px;">
+                                <tr>
+                                    <td style="padding: 20px;">
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td style="padding-bottom: 12px; border-bottom: 1px solid #fecaca;">
+                                                    <span
+                                                        style="font-size: 12px; color: #991b1b; font-weight: 700; text-transform: uppercase;">Reference
+                                                        UserId</span><br>
+                                                    <span style="font-size: 16px; color: #111827; font-weight: 600;">
+                                                        {{ user.id }} </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-bottom: 12px; border-bottom: 1px solid #fecaca;">
+                                                    <span
+                                                        style="font-size: 12px; color: #991b1b; font-weight: 700; text-transform: uppercase;">Reference
+                                                        Phone Number</span><br>
+                                                    <span style="font-size: 16px; color: #111827; font-weight: 600;">
+                                                        {{ user.mobile }} </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-top: 12px;">
+                                                    <span
+                                                        style="font-size: 12px; color: #991b1b; font-weight: 700; text-transform: uppercase;">Identity
+                                                        Verified Via Email</span><br>
+                                                    <span style="font-size: 16px; color: #111827; font-weight: 600;">
+                                                        {{ user.email | capfirst }} </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-top: 12px;">
+                                                    <span
+                                                        style="font-size: 12px; color: #991b1b; font-weight: 700; text-transform: uppercase;">Identity
+                                                        Role</span><br>
+                                                    <span style="font-size: 16px; color: #111827; font-weight: 600;">
+                                                        {{ user.get_role_display }} </span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p style="font-size: 14px; line-height: 1.6; color: #6b7280; margin: 25px 0 0 0;">
+                                <strong>What happens next?</strong><br>
+                                • Access to all enterprise services is now revoked.<br>
+                                • Cloud data sync and local cache tokens have been invalidated.<br>
+                                • Any recurring subscriptions (if applicable) have been terminated.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding: 0 40px 30px 40px;">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                                style="background-color: #f8fafc; border-radius: 4px;">
+                                <tr>
+                                    <td
+                                        style="padding: 15px; font-size: 12px; color: #64748b; line-height: 1.5; text-align: center; border: 1px dashed #cbd5e1;">
+                                        Audit ID: <span style="font-family: monospace; color: #334155;">
+                                            DEL- {{ user.id }} </span> | {% now "F d, Y" %} at {% now "H:i A" %} IST
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding: 40px; background-color: #0f172a; border-top: 4px solid #dc2626;">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td style="padding-bottom: 20px;">
+                                        <p style="font-size: 13px; color: #94a3b8; margin: 0;">In case of unauthorized
+                                            activity or if you did not request this:</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="mailto:  {{   ADMIN_EMAIL   }}  "
+                                            style="background-color: #dc2626; color: #ffffff; padding: 12px 25px; text-decoration: none; font-size: 14px; font-weight: 700; border-radius: 4px; display: inline-block;">
+                                            Emergency Support
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                    style="max-width:600px; margin-top: 30px;">
+                    <tr>
+                        <td align="center"
+                            style="font-size: 11px; color: #94a3b8; line-height: 1.8; text-transform: uppercase; letter-spacing: 0.5px;">
+                            &copy; 2025 {{ SITE_NAME }} Pvt Ltd. <br>
+                            Confidentiality Notice: This is an automated security transmission.
+                            <br>
+                            <a href="#" style="color: #64748b; text-decoration: underline;">Privacy Policy</a> | <a
+                                href="#" style="color: #64748b; text-decoration: underline;">Security Protocols</a>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

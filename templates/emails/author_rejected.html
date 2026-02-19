@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Status Update</title>
+</head>
+
+<body
+    style="margin:0; padding:0; background-color:#f8fafc; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#334155;">
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0"
+        style="background-color:#f8fafc; padding: 40px 15px;">
+        <tr>
+            <td align="center">
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                    style="max-width:600px; background-color:#ffffff; border-radius:12px; overflow:hidden; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0;">
+
+                    <tr>
+                        <td align="center" style="background-color: #1e293b; padding: 40px 40px;">
+                            <div
+                                style="background-color: rgba(245, 158, 11, 0.2); display: inline-block; padding: 8px 16px; border-radius: 50px; border: 1px solid #f59e0b; margin-bottom: 15px;">
+                                <span
+                                    style="color: #fbbf24; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Update
+                                    Required</span>
+                            </div>
+                            <h1 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 700;">Account Review
+                                Status</h1>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding: 40px;">
+                            <p style="font-size: 16px; color: #1e293b; font-weight: 600; margin: 0 0 15px 0;">
+                                Hello {{ user.username | capfirst }} ,
+                            </p>
+                            <p style="font-size: 15px; line-height: 1.6; color: #64748b; margin: 0 0 20px 0;">
+                                Thank you for your patience while our team reviewed your author profile. At this time,
+                                your application has <strong>not been approved</strong> for verification on the
+                                <strong>{{ SITE_NAME }} </strong> platform.
+                            </p>
+                            <div
+                                style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 30px; margin-bottom: 40px;">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td style="padding-bottom: 15px; border-bottom: 1px dashed #cbd5e1;">
+                                            <p
+                                                style="margin:0; font-size:11px; color:#059669; font-weight:800; text-transform:uppercase; letter-spacing:1px;">
+                                                Profile Overview</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-top: 20px;">
+                                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td style="padding-bottom: 12px; font-size: 14px; color: #64748b;">
+                                                        Username:</td>
+                                                    <td align="right"
+                                                        style="padding-bottom: 12px; font-size: 14px; color: #1e293b; font-weight: 700;">
+                                                        {{ user.username }} </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-bottom: 12px; font-size: 14px; color: #64748b;">
+                                                        Official Email:</td>
+                                                    <td align="right"
+                                                        style="padding-bottom: 12px; font-size: 14px; color: #1e293b; font-weight: 700;">
+                                                        {{ user.email |capfirst }} </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-bottom: 12px; font-size: 14px; color: #64748b;">
+                                                        Mobile:</td>
+                                                    <td align="right"
+                                                        style="padding-bottom: 12px; font-size: 14px; color: #1e293b; font-weight: 700;">
+                                                        {{ user.mobile }} </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-bottom: 12px; font-size: 14px; color: #64748b;">
+                                                        Platform Role:</td>
+                                                    <td align="right" style="padding-bottom: 12px;"><span
+                                                            style="background:#059669; color:#ffffff; padding:2px 10px; border-radius:8px; font-size:11px; font-weight:700;">
+                                                            {{ user.get_role_display }} </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 10px; font-size: 14px; color: #64748b;">
+                                                        Joined On:</td>
+                                                    <td align="right"
+                                                        style="padding-top: 10px; font-size: 14px; color: #1e293b; font-weight: 700;">
+                                                        {% now "F d, Y" %} at {% now "H:i A" %} IST
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                                style="background-color: #fffbeb; border-left: 4px solid #f59e0b; border-radius: 4px;">
+                                <tr>
+                                    <td style="padding: 20px;">
+                                        <p style="margin: 0; font-size: 14px; color: #92400e; font-weight: 600;">Next
+                                            Steps for Approval:</p>
+                                        <ul
+                                            style="margin: 10px 0 0 0; padding-left: 20px; font-size: 14px; color: #b45309; line-height: 1.6;">
+                                            <li>Ensure your profile information is complete and accurate.</li>
+                                            <li>Review our community guidelines and content standards.</li>
+                                            <li>Submit a fresh verification request after making updates.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 30px;">
+                                <tr>
+                                    <td align="center">
+                                        <a href="#"
+                                            style="background: #334155; color: #ffffff; padding: 12px 25px; text-decoration: none; font-size: 14px; font-weight: 700; border-radius: 6px; display: inline-block;">
+                                            Update My Profile
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p
+                                style="font-size: 14px; color: #94a3b8; margin-top: 30px; line-height: 1.5; text-align: center;">
+                                If you believe this decision was made in error or was unbiased, please don't hesitate to
+                                reach out. Our support team is here to assist you.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding: 30px 40px; background-color: #f8fafc; border-top: 1px solid #e2e8f0;">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <p style="margin: 0; font-size: 14px; color: #475569;">
+                                            Regards,<br>
+                                            <strong>{{ SITE_NAME }} Quality Assurance Team</strong>
+                                        </p>
+                                    </td>
+                                    <td align="right">
+                                        <a href="mailto:{{   ADMIN_EMAIL    }}  "
+                                            style="color: #6366f1; font-size: 14px; font-weight: 600; text-decoration: none;">Contact
+                                            Support &rarr;</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                    style="max-width:600px; margin-top: 25px;">
+                    <tr>
+                        <td align="center"
+                            style="font-size: 11px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px;">
+                            &copy; 2025 {{ SITE_NAME }} Security & Verification Desk
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

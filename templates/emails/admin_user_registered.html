@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Community</title>
+</head>
+
+<body
+    style="margin:0; padding:0; background-color:#f8fafc; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#334155;">
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0"
+        style="background-color:#f8fafc; padding: 40px 15px;">
+        <tr>
+            <td align="center">
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                    style="max-width:600px; background-color:#ffffff; border-radius:16px; overflow:hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08); border: 1px solid #e2e8f0;">
+
+                    <tr>
+                        <td align="center"
+                            style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); padding: 20px 10px;">
+                            <div
+                                style="background-color: rgba(255,255,255,0.2); width: 40px; height: 40px; border-radius: 50%; line-height: 40px; font-size: 20px; margin-bottom: 10px;">
+                                ✨
+                            </div>
+                            <h1
+                                style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 800; letter-spacing: -0.5px;">
+                                Welcome to {{ SITE_NAME }}
+                            </h1>
+                            <p style="color: rgba(255,255,255,0.9); margin-top: 10px; font-size: 16px;">We're thrilled
+                                to have you on board!</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding: 40px 40px 20px 40px;">
+                            <p style="font-size: 18px; color: #1e293b; font-weight: 600; margin: 0 0 15px 0;">
+                                Hello Admin,
+                            </p>
+                            <p style="font-size: 15px; line-height: 1.6; color: #64748b; margin: 0 0 30px 0;">
+                                A new users journey with <strong> {{ SITE_NAME }} </strong> starts today. His account is
+                                active
+                                and ready. Here are user {{ user.username | capfirst }} 's registration details:
+                            </p>
+
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                                style="background-color: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0;">
+                                <tr>
+                                    <td style="padding: 25px;">
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td style="padding-bottom: 15px;">
+                                                    <span
+                                                        style="font-size: 11px; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Username</span><br>
+                                                    <span style="font-size: 15px; color: #334155; font-weight: 600;">
+                                                        {{ user.username }} </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-bottom: 15px;">
+                                                    <span
+                                                        style="font-size: 11px; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Email
+                                                        Address</span><br>
+                                                    <span style="font-size: 15px; color: #334155; font-weight: 600;">
+                                                        {{ user.email | capfirst }} </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-bottom: 15px;">
+                                                    <span
+                                                        style="font-size: 11px; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Role
+                                                        & Access</span><br>
+                                                    <span
+                                                        style="display: inline-block; padding: 2px 10px; background-color: #e0e7ff; color: #4338ca; border-radius: 6px; font-size: 12px; font-weight: 700; margin-top: 5px;">
+                                                        {{ user.get_role_display }}
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span
+                                                        style="font-size: 11px; color: #94a3b8; font-weight: 700;  text-transform: uppercase; letter-spacing: 1px;">Verified
+                                                        Mobile</span><br>
+                                                    <span
+                                                        style="font-size: 15px; color: #334155; color:#4338ca;font-weight: 600;">+91
+                                                        {{ user.mobile }} </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span
+                                                        style="font-size: 11px; color: #94a3b8; font-weight: 700;  text-transform: uppercase; letter-spacing: 1px;">Verified
+                                                        Date</span><br>
+                                                    <span
+                                                        style="font-size: 15px; color: #334155; color:#4338ca;font-weight: 600;">
+                                                        {% now "F d, Y" %} at {% now "H:i A" %} IST
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 30px;">
+                                <tr>
+                                    <td align="center">
+                                        <a href="#"
+                                            style="background: #4f46e5; color: #ffffff; padding: 14px 35px; text-decoration: none; font-size: 15px; font-weight: 700; border-radius: 10px; display: inline-block;">
+                                            Get Started Now
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding: 20px 40px 40px 40px;">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                                style="border-top: 1px solid #f1f5f9; padding-top: 30px;">
+                                <tr>
+                                    <td>
+                                        <h4
+                                            style="margin: 0 0 15px 0; font-size: 14px; color: #1e293b; text-transform: uppercase; letter-spacing: 1px;">
+                                            Need Assistance?</h4>
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="50%" style="padding-right: 10px;">
+                                                    <div
+                                                        style="background-color: #fdf2f8; border: 1px solid #fbcfe8; padding: 15px; border-radius: 10px;">
+                                                        <span style="font-size: 18px;">✉️</span>
+                                                        <p
+                                                            style="margin: 8px 0 5px 0; font-size: 13px; font-weight: 700; color: #be185d;">
+                                                            Support Desk</p>
+                                                        <a href="mailto:   {{   ADMIN_EMAIL     }}   "
+                                                            style="font-size: 12px; color: #64748b; text-decoration: none;">Click
+                                                            to Email</a>
+                                                    </div>
+                                                </td>
+                                                <td width="50%" style="padding-left: 10px;">
+                                                    <div
+                                                        style="background-color: #f0fdf4; border: 1px solid #bbf7d0; padding: 15px; border-radius: 10px;">
+                                                        <span style="font-size: 18px;">👨‍💻</span>
+                                                        <p
+                                                            style="margin: 8px 0 5px 0; font-size: 13px; font-weight: 700; color: #15803d;">
+                                                            Talk to Admin</p>
+                                                        <a href="tel:   {{   ADMIN_PHONE     }}   "
+                                                            style="font-size: 12px; color: #64748b; text-decoration: none;">Direct
+                                                            Contact</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding: 0 40px 40px 40px; text-align: center;">
+                            <p style="font-size: 13px; color: #94a3b8; line-height: 1.5; margin: 0;">
+                                Questions? Visit our <a href="#"
+                                    style="color: #6366f1; text-decoration: none; font-weight: 600;">Help Center</a> or
+                                reply to this email.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                    style="max-width:600px; margin-top: 25px;">
+                    <tr>
+                        <td align="center"
+                            style="font-size: 11px; color: #94a3b8; line-height: 1.8; text-transform: uppercase;">
+                            &copy; 2025 {{ SITE_NAME }} &bull; Global Headquarters
+                            <br>
+                            <a href="#" style="color: #94a3b8;">Privacy Policy</a> | <a href="#"
+                                style="color: #94a3b8;">Terms of Service</a>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .header {
+            background-color: #003366;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* TCS Blue */
+        .header h1 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+            color: #333333;
+        }
+
+        .otp-box {
+            background-color: #f0f4f8;
+            border: 1px dashed #003366;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 25px 0;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 10px;
+            color: #003366;
+        }
+
+        .footer {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #777777;
+            border-top: 1px solid #eeeeee;
+        }
+
+        .warning {
+            color: #d9534f;
+            font-size: 13px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Book Explore Services</h1>
+        </div>
+
+        <div class="content">
+            <h2 style="margin-top: 0;">Verification Required</h2>
+            <p>Hello User,</p>
+            <p>To complete your secure login/verification process, please use the following One-Time Password (OTP):</p>
+
+            <div class="otp-box">
+                {{ otp }}
+            </div>
+
+            <p>This OTP is valid for the next <b>5 minutes. {{ otp }} send time {% now "F d, Y" %} at {% now "H:i A" %}
+                    IST</b>. Please do not share this code with anyone,
+                including
+                BookExplore employees.</p>
+
+            <p class="warning">
+                <b>Security Note:</b> If you did not initiate this request, please change your password immediately or
+                contact our global helpdesk.
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 BookExplore Services Limited. All Rights Reserved.</p>
+            <p>New Delhi, India | <a href="#">Privacy Policy</a></p>
+            <p>This is an auto-generated email. Please do not reply.</p>
+        </div>
+    </div>
+</body>
+
+</html>

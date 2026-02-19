@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verified Creator</title>
+</head>
+
+<body
+    style="margin:0; padding:0; background-color:#f8fafc; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0"
+        style="background-color:#f8fafc; padding: 40px 10px;">
+        <tr>
+            <td align="center">
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                    style="max-width:500px; background-color:#ffffff; border-radius:24px; overflow:hidden; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05); border: 1px solid #eef2f6;">
+
+                    <tr>
+                        <td align="left"
+                            style="background: linear-gradient(135deg, #4f46e5 0%, #818cf8 100%); padding: 30px 40px;">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <div
+                                            style="background: rgba(255,255,255,0.2); display: inline-block; padding: 6px 12px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.3); margin-bottom: 10px;">
+                                            <span
+                                                style="color: #ffffff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Success
+                                                Update</span>
+                                        </div>
+                                        <h1
+                                            style="margin:0; color:#ffffff; font-size: 24px; font-weight: 800; letter-spacing: -0.5px;">
+                                            Verification Live ✨</h1>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding: 40px;">
+                            <p style="margin: 0 0 25px 0; font-size: 16px; color: #475569; line-height: 1.6;">
+                                Hi <strong> {{ user.username | capfirst }} </strong>, your profile has been officially
+                                verified.
+                                Your
+                                creator tools are now unlocked for {{ SITE_NAME }}. Now you can start publishing on
+                                {{ SITE_NAME }} and
+                                sharing your content
+                                with the world.
+                            </p>
+
+                            <div
+                                style="background-color: #fcfcfd; border-radius: 20px; padding: 25px; border: 1px dashed #cbd5e1;">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td style="padding-bottom: 15px;">
+                                            <p
+                                                style="margin:0; font-size:11px; color:#94a3b8; font-weight:700; text-transform:uppercase;">
+                                                Identity</p>
+                                            <p
+                                                style="margin:2px 0 0 0; font-size:14px; color:#1e293b; font-weight:600;">
+                                                {{ user.username | capfirst }} </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-bottom: 15px;">
+                                            <p
+                                                style="margin:0; font-size:11px; color:#94a3b8; font-weight:700; text-transform:uppercase;">
+                                                Contact Info</p>
+                                            <p
+                                                style="margin:2px 0 0 0; font-size:14px; color:#4338ca; font-weight:600;">
+                                                {{ user.email }} <br>
+                                                <span style="font-size:13px; color:#64748b;"> {{ user.mobile }} </span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-bottom: 15px;">
+                                            <p
+                                                style="margin:0; font-size:11px; color:#94a3b8; font-weight:700; text-transform:uppercase;">
+                                                Status & Role</p>
+                                            <p style="margin:4px 0 0 0;">
+                                                <span
+                                                    style="background-color:#e0e7ff; color:#4338ca; padding:4px 10px; border-radius:8px; font-size:12px; font-weight:700;">
+                                                    {{ author.user.get_role_display }} </span>
+                                                <span
+                                                    style="background-color:#dcfce7; color:#15803d; padding:4px 10px; border-radius:8px; font-size:12px; font-weight:700; margin-left:5px;">VERIFIED</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-bottom: 15px;">
+                                            <p
+                                                style="margin:0; font-size:11px; color:#94a3b8; font-weight:700; text-transform:uppercase;">
+                                                Profile URL</p>
+                                            <a href="#"
+                                                style="display:block; margin-top:2px; font-size:14px; color:#4f46e5; font-weight:600; text-decoration:none;">
+                                                {{ SITE_NAME }}</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-top: 10px; border-top: 1px solid #f1f5f9;">
+                                            <p
+                                                style="margin:0; font-size:11px; color:#94a3b8; font-weight:700; text-transform:uppercase;">
+                                                Approval Date</p>
+                                            <p
+                                                style="margin:2px 0 0 0; font-size:14px; color:#1e293b; font-weight:500;">
+                                                {% now "F d, Y" %} at {% now "H:i A" %} IST
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 35px;">
+                                <tr>
+                                    <td align="center">
+                                        <a href="#"
+                                            style="background-color: #4f46e5; color: #ffffff; padding: 14px 40px; text-decoration: none; font-size: 15px; font-weight: 700; border-radius: 14px; display: inline-block; box-shadow: 0 10px 20px -5px rgba(79, 70, 229, 0.4);">
+                                            Enter Dashboard
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0"
+                                style="margin-top: 40px; border-top: 1px solid #f1f5f9; padding-top: 25px;">
+                                <tr>
+                                    <td align="center">
+                                        <p style="margin: 0; font-size: 14px; color: #475569; font-weight: 600;">Need
+                                            any assistance?</p>
+                                        <p
+                                            style="margin: 5px 0 0 0; font-size: 13px; color: #64748b; line-height: 1.5;">
+                                            Our support team is here for you 24/7.
+                                        </p>
+                                        <div style="margin-top: 15px;">
+                                            <a href="mailto:  {{   ADMIN_EMAIL      }}"
+                                                style="color: #4f46e5; text-decoration: none; font-size: 14px; font-weight: 700; margin: 0 10px;">Email
+                                                Us</a>
+                                            <span style="color: #cbd5e1;">|</span>
+                                            <a href="#"
+                                                style="color: #4f46e5; text-decoration: none; font-size: 14px; font-weight: 700; margin: 0 10px;">Help
+                                                Center</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="center" style="padding: 0 40px 30px 40px;">
+                            <p style="margin: 0; font-size: 12px; color: #94a3b8;">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1063/1063220.png" width="14"
+                                    height="14" style="vertical-align: middle; margin-right: 5px; opacity: 0.5;">
+                                Logged in as <strong> {{ user.username | capfirst }} </strong>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p
+                    style="margin-top: 30px; font-size: 12px; color: #cbd5e1; text-align: center; font-weight: 500; letter-spacing: 1px;">
+                    SENT BY {{ SITE_NAME }} &bull; VERIFICATION SECURED
+                </p>
+
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
