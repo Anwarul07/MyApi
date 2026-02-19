@@ -8235,3 +8235,8 @@ env/Scripts/pygmentize.exe
 env/Scripts/python.exe
 env/Scripts/pythonw.exe
 env/Scripts/sqlformat.exe
+
+# databases
+*.sqlite3
+*.db
+
