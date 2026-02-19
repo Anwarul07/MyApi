@@ -2,6 +2,11 @@
 *.sqlite3
 books.sqlite3
 
+
+# databases
+*.sqlite3
+*.db
+
 # Environment variables
 .env
 
