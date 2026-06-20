@@ -16,6 +16,7 @@ SITE_NAME = config("SITE_NAME")
 import threading
 
 
+
 def send_email_async(email_message):
     def _send():
         try:
