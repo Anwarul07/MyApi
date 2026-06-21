@@ -1,6 +1,6 @@
 # SQLite databases
 *.sqlite3
-books.sqlite3
+books.sqlite3 
 
 
 # databases
