@@ -40,8 +40,8 @@ INSTALLED_APPS += [
     "cloudinary",
     "cloudinary_storage",
     "rest_framework_simplejwt.token_blacklist",
-    # "razorpay",
-    "silk",
+    "razorpay",
+    # "silk",
 ]
 
 MIDDLEWARE = [
@@ -55,8 +55,17 @@ MIDDLEWARE = [
     "Apps.middlewares.MaintenanceModeMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "silk.middleware.SilkyMiddleware",
+    # "silk.middleware.SilkyMiddleware",
 ]
+
+if DEBUG:
+    INSTALLED_APPS += [
+        "silk",
+    ]
+
+    MIDDLEWARE += [
+        "silk.middleware.SilkyMiddleware",
+    ]
 
 
 MAINTENANCE_MODE = config("MAINTENANCE_MODE", "false").lower() == "true"
